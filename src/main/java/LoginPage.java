@@ -1,5 +1,3 @@
-import sun.rmi.runtime.Log;
-
 public class LoginPage extends BasePage {
 
     private WebElement login_eb = new WebElement("Login Edit Box locator");
@@ -13,7 +11,7 @@ public class LoginPage extends BasePage {
         System.out.println("LoginPage default constructor call");
     }
 
-    public void Login(LoginData ld) {
+    public void login(LoginData ld) {
         System.out.println("LoginPage login call with parameter:" + ld.toString());
 
         enterLogin(ld.getLogin());

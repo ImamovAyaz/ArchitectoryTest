@@ -23,7 +23,7 @@ public class LoginTestjunit5 extends BaseTest {
                 //LoginData ld = new LoginData(array[0], array[1]);
                 LoginData ld = new LoginData("login", "password", "+7999", "1234");
                 LoginPage loginPage = new LoginPage();
-                loginPage.Login(ld);
+                loginPage.login(ld);
                 System.out.println("Логин/Пароль:" + array[0] + "/" + array[1]);
 
                 assertTrue(HomePage.isImportantLabelAvaliable());
