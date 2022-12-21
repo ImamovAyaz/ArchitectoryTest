@@ -1,5 +1,5 @@
 public class LoginData {
-    private String login;
+    private static String login;
     private String password;
     private String phone;
     private String code;
@@ -21,11 +21,11 @@ public class LoginData {
     }
 
 
-    public String getLogin()
+    public static String getLogin()
     {
         System.out.println("LoginData getLogin call: " + login);
 
-        return this.login;
+        return login;
     }
 
     public String getPassword()

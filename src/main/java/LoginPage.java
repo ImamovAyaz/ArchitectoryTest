@@ -14,7 +14,7 @@ public class LoginPage extends BasePage {
     public void login(LoginData ld) {
         System.out.println("LoginPage login call with parameter:" + ld.toString());
 
-        enterLogin(ld.getLogin());
+        enterLogin(LoginData.getLogin());
         enterPassword(ld.getPassword());
 
         enterPhone(ld.getPhone());
