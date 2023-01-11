@@ -16,12 +16,9 @@ public class LoginTestTestNG extends BaseTest {
                 {"login3", "password3"}
         };
     }
+
     @Test(dataProvider = "credentials")
     public void loginTest(String login, String password) {
-        // TODO: Add reading from default input file
-        // TODO***: Add xml serialization \ deSerialization for LoginData
-        // 3A Rule
-
         LoginData ld = new LoginData(login, password, "+7999", "1234");
         LoginPage loginPage = new LoginPage();
         loginPage.login(ld);

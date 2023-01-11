@@ -1,5 +1,5 @@
 public class BasePage {
-    public BasePage (){
+    public BasePage() {
         System.out.println("BasePage default constructor call");
     }
 

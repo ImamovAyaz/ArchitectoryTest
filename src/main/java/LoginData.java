@@ -10,9 +10,10 @@ public class LoginData {
         this.login = login;
         this.password = password;
     }
+
     public LoginData(String login, String password, String phone, String code) {
         System.out.println("LoginData constructor call with parameters: " +
-                login + ", " + password +  ", " + phone + ", " + code);
+                login + ", " + password + ", " + phone + ", " + code);
 
         this.login = login;
         this.password = password;
@@ -21,31 +22,26 @@ public class LoginData {
     }
 
 
-    public static String getLogin()
-    {
+    public static String getLogin() {
         System.out.println("LoginData getLogin call: " + login);
 
         return login;
     }
 
-    public String getPassword()
-    {
+    public String getPassword() {
         System.out.println("LoginData getPassword call: " + password);
 
         return this.password;
     }
 
-    public String getPhone()
-    {
+    public String getPhone() {
         System.out.println("LoginData getPhone call: " + phone);
 
         return this.phone;
     }
 
-    public String getCode()
-    {
+    public String getCode() {
         System.out.println("LoginData getCode call: " + code);
-
         return this.code;
     }
 }

@@ -10,16 +10,12 @@ import static junit.framework.TestCase.assertTrue;
 public class LoginTestjunit4 extends BaseTest {
     @Test
     public void loginTest() {
-        // TODO: Add reading from default input file
-        // TODO***: Add xml serialization \ deSerialization for LoginData
-        // 3A Rule
-
-        try(FileReader file = new FileReader(".idea/LoginPassword")) {
+        try (FileReader file = new FileReader(".idea/LoginPassword")) {
             BufferedReader reader = new BufferedReader(file);
             String line = reader.readLine();
             System.out.println(line);
 
-            while (line != null){
+            while (line != null) {
                 String[] array = line.split(";");
                 //LoginData ld = new LoginData(array[0], array[1]);
                 LoginData ld = new LoginData("login", "password", "+7999", "1234");
@@ -31,8 +27,7 @@ public class LoginTestjunit4 extends BaseTest {
                 line = reader.readLine();
             }
 
-        }
-        catch (IOException ex){
+        } catch (IOException ex) {
             System.out.println(ex.getMessage());
         }
 
