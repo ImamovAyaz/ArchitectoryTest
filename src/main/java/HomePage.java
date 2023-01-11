@@ -7,7 +7,6 @@ public class HomePage extends BasePage {
         return important_label.isVisible() && important_label.isClickable();
     }
 
-
     static public boolean isImportantLabelAvaliable() {
         important_label.isAvailable();
         System.out.println("HomePage isImportantLabelAvaliable call");
