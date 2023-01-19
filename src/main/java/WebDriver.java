@@ -1,5 +1,10 @@
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 public class WebDriver {
+    private static final Logger log = LoggerFactory.getLogger(BasePage.class);
+
     public WebDriver() {
-        System.out.println("WebDriver default constructor call");
+        log.info("WebDriver default constructor call");
     }
 }

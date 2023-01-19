@@ -1,5 +1,8 @@
-public class LoginPage extends BasePage {
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
+public class LoginPage extends BasePage {
+    private static final Logger log = LoggerFactory.getLogger(BasePage.class);
     private WebElement login_eb = new WebElement("Login Edit Box locator");
     private WebElement password_eb = new WebElement("Password Edit Box locator");
     private WebElement phone_eb = new WebElement("Phone Edit Box locator");
@@ -8,11 +11,11 @@ public class LoginPage extends BasePage {
 
 
     public LoginPage() {
-        System.out.println("LoginPage default constructor call");
+        log.info("LoginPage default constructor call");
     }
 
     public void login(LoginData ld) {
-        System.out.println("LoginPage login call with parameter:" + ld.toString());
+        log.info("LoginPage login call with parameter:" + ld.toString());
 
         enterLogin(LoginData.getLogin());
         enterPassword(ld.getPassword());
@@ -24,38 +27,37 @@ public class LoginPage extends BasePage {
     }
 
     private void enterCode(String code) {
-        System.out.println("LoginPage enterCode call with parameter:" + code);
+        log.info("LoginPage enterCode call with parameter:" + code);
 
         getDriver();
         code_eb.enterText(code);
     }
 
     private void enterPhone(String phone) {
-        System.out.println("LoginPage enterPhone call with parameter:" + phone);
+        log.info("LoginPage enterPhone call with parameter:" + phone);
 
         getDriver();
         phone_eb.enterText(phone);
     }
 
     public void enterLogin(String login) {
-        System.out.println("LoginPage enterLogin call with parameter:" + login);
+        log.info("LoginPage enterLogin call with parameter:" + login);
 
         getDriver();
         login_eb.enterText(login);
     }
 
     public void enterPassword(String password) {
-        System.out.println("LoginPage enterPassword call with parameter:" + password);
+        log.info("LoginPage enterPassword call with parameter:" + password);
 
         getDriver();
         password_eb.enterText(password);
-        System.out.println("EnterPassword");
+        log.info("EnterPassword");
     }
 
     public void submitLoginClick() {
-
         getDriver();
         submit_button.Click();
-        System.out.println("SubmitLoginClick");
+        log.info("SubmitLoginClick");
     }
 }

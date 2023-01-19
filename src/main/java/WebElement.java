@@ -1,27 +1,32 @@
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 public class WebElement {
+    private static final Logger log = LoggerFactory.getLogger(BasePage.class);
+
     public WebElement(String locator) {
-        System.out.println("WebElement constructor call with parameters: " + locator);
+        log.info("WebElement constructor call with parameters: " + locator);
     }
 
     public void enterText(String text) {
-        System.out.println("WebElement enterText call with parameter: " + text);
+        log.info("WebElement enterText call with parameter: " + text);
     }
 
     public void Click() {
-        System.out.println("WebElement Click call");
+        log.info("WebElement Click call");
     }
 
     public void isAvailable() {
-        System.out.println("WebElement isAvailable call");
+        log.info("WebElement isAvailable call");
     }
 
     public boolean isVisible() {
-        System.out.println("WebElement isVisible call");
+        log.info("WebElement isVisible call");
         return true;
     }
 
     public boolean isClickable() {
-        System.out.println("WebElement isClickable call");
+        log.info("WebElement isClickable call");
         return true;
     }
 }

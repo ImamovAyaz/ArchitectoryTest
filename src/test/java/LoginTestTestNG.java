@@ -1,3 +1,5 @@
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -8,6 +10,8 @@ import java.io.IOException;
 
 
 public class LoginTestTestNG extends BaseTest {
+    private static final Logger log = LoggerFactory.getLogger(BasePage.class);
+
     @DataProvider(name = "credentials") // Создаем метод-провайдер
     public Object[][] getDataFromDataprovider() {
         return new Object[][]{
@@ -22,7 +26,7 @@ public class LoginTestTestNG extends BaseTest {
         LoginData ld = new LoginData(login, password, "+7999", "1234");
         LoginPage loginPage = new LoginPage();
         loginPage.login(ld);
-        System.out.println("Логин/Пароль:" + LoginData.getLogin() + "/" + ld.getPassword());
+        log.info("Логин/Пароль:" + LoginData.getLogin() + "/" + ld.getPassword());
 
         Assert.assertTrue(HomePage.isImportantLabelAvaliable());
 
